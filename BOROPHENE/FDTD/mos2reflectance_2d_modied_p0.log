@@ -1,0 +1,79 @@
+FDTD Solutions Version 8.18.1262 (Mac 64bit)
+ expires (month/day/year): 8/20/2017
+using config file: /Users/jay/.config/Lumerical/FDTD Solutions.ini
+license host: Jays-MBP
+current time: Fri Jul 21 10:58:35 2017
+Running on host: Jays-MBP.home
+All processes are communicating and ready to proceed to simulation...
+Running fsp file: /Applications/Lumerical/FDTD Solutions/FDTD Solutions.app/Contents/MacOS/fdtd-engine -t 1 -remote /Users/jay/CODE/Fresnel/Borophene/FDTD/mos2reflectance_2d_modied.fsp
+number of processors is 4
+processors are distributed as: 4x1x1
+Running 2D Simulation
+Starting meshing
+Simulation size in gridpoints: 100 x 3 x 1
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0.000278 seconds of CPU time
+0 0
+Starting meshing
+Simulation size in gridpoints: 100 x 3 x 1
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0.000162 seconds of CPU time
+0 0
+finished material properties
+Selected kernel with optimization level: 2 and split-field propagation direction: 0
+Starting meshing
+Simulation size in gridpoints: 100 x 3 x 1
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0.000154 seconds of CPU time
+0 0
+Selected kernel with optimization level: 2 and split-field propagation direction: 0
+-----------------------------------------
+Beginning initialization of 2D FDTD Simulation
+  Including TE Simulation
+Starting to add sources to simulation
+
+Adding Gaussian source propagating in X
+Reverted to narrowband source injection
+Starting to add boundary conditions to simulation
+Adding PML BC
+Adding parallel BC
+Adding Anti-Symmetric BC
+Adding Anti-Symmetric BC
+Starting to add monitors to Simulation
+Adding analysis monitor
+Adding frequency monitor
+Adding time monitor
+Adding frequency monitor
+Adding frequency monitor
+Adding frequency monitor
+Adding frequency monitor
+Finished initialization of 2D Simulation
+-----------------------------------------
+All processes are communicating and ready to proceed to simulation...
+Starting 3028274 total iterations
+0% complete. Max time remaining: 6 mins, 11 secs. Auto Shutoff: 1
+1% complete. Max time remaining: 4 mins, 4 secs. Auto Shutoff: 1
+2% complete. Max time remaining: 3 mins, 38 secs. Auto Shutoff: 0.95577
+3% complete. Max time remaining: 3 mins, 29 secs. Auto Shutoff: 0.0725388
+4% complete. Max time remaining: 3 mins, 22 secs. Auto Shutoff: 2.8157e-07
+5% complete. Max time remaining: 3 mins, 19 secs. Auto Shutoff: 1.65584e-07
+100% complete. Max time remaining: 0 mins, 0 secs. Auto Shutoff: 4.99905e-08
+Early termination of simulation, the autoshutoff criteria are satisfied.
+Completed 177086 iterations, or 5.847754e-14s of Simulation Time
+Process 0 starting to collect data
+    collecting TM monitor data
+    collecting TE monitor data
+    collecting TM source data
+    collecting TE source data
+Reverted to narrowband source injection
+Finished collecting data
+Simulation completed successfully at: Fri Jul 21 10:58:47 2017
+Overall wall time measurements in seconds:
+    time to mesh and initialize: 0
+    time to run FDTD simulation: 12
+    time to finalize data and save to files: 0
+    FDTD solver speed: 4.42715 Mnodes/s
+    total FDTD solver speed on 4 processes: 17.7086 Mnodes/s

@@ -1,0 +1,39 @@
+run;
+
+Rnum=getresult("Reflectance", "T");
+
+Tnum=getresult("Transmittance", "T");
+
+?t_MoS2 = getnamed("Mos2","x span");
+
+f = Rnum.f;
+
+d = [0;t_MoS2;0];
+#d = [0;0];
+nd = length(d);
+nf = length(f);
+
+
+index = matrix(nd,nf);
+
+index(1,1:nf) = 1;
+index(2,1:nf) = getfdtdindex("Borophene",f, min(f), max(f));
+index(3,1:nf) = 1;
+#index(3,1:nf) = getfdtdindex("SiO2 (Glass) - Palik",f, min(f), max(f));
+
+RT_anal = stackrt(index,d,f);
+
+filename="/Users/jay/CODE/Fresnel/Borophene/FDTD/100nm_Borophene_Ref_700nm_XPol_45deg.txt";
+plot((1e9*c/f),RT_anal.Rp,Rnum.T,"Wavelength (nm)", "Reflectance");
+
+legend("Analytical (stackrt)", "Numerical");
+
+fm = length(f);
+
+for (i=1:fm) {
+
+  ?str = num2str( 1e9*c/f(i))+" "+num2str(RT_anal.Rp(i))+" "+num2str(Rnum.T(i))+" "+num2str(-Tnum.T(i));
+  write(filename,str); 
+}
+  
+

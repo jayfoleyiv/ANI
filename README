@@ -1,0 +1,7 @@
+### TO RUN THIS CODE, FIRST LAUNCH A VIRTUALENV BY TYPING
+
+source emp_project/bin/activate
+
+THEN, CD INTO EXAMPLES AND RUN CODE anisotropic_3Layer.py by typing
+
+python anisotropic_3Layer.py
